@@ -1,0 +1,25 @@
+.arrow {
+    background: #333333;
+    box-shadow: 0 0 11px 1px black;
+    border: 1px solid grey;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.arrow-block {
+    font-family: sans-serif;
+    display: inline-block;
+    padding: 30px;
+    margin: 10px;
+    height: 3px;
+    width: 70px;
+}
+
+.arrow:active,
+._active
+{
+    position: relative;
+    top: 3px;
+    left: 3px;
+}
