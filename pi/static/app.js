@@ -9,15 +9,6 @@ HTMLAnchorElement.prototype.deactive = function() {
 
 var oldParam;
 function getRequest(param) {
-    //var img = document.createElement('img');
-    //var removeImg = function() {
-        //document.body.removeChild(img);
-    //};
-
-    //img.setAttribute('src', '/' + param);
-    //document.body.appendChild(img);
-    //img.addEventListener('load', removeImg);
-    //img.addEventListener('error', removeImg);
     var xhr = new XMLHttpRequest();
     if (oldParam !== param) {
         oldParam = param;
@@ -33,7 +24,7 @@ setInterval(function() {
     if (!nextDir)
         deactiveButtons();
 
-}, 100);
+}, 10);
 
 function notify(dir) {
     nextDir = dir;
