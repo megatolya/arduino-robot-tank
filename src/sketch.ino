@@ -56,14 +56,14 @@ void loop()
 
             if (serialVal == UP) {
                 stop();
-                move(1, SPEED, 1);
-                move(2, SPEED, 1);
+                move(1, SPEED, 0);
+                move(2, SPEED, 0);
             }
 
             if (serialVal == DOWN) {
                 stop();
-                move(1, SPEED, 0);
-                move(2, SPEED, 0);
+                move(1, SPEED, 1);
+                move(2, SPEED, 1);
             }
 
             if (serialVal == STOP) {

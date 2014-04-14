@@ -2,7 +2,14 @@ from flask import Flask, url_for, render_template
 
 import serial
 
-ser = serial.Serial('/dev/ttyACM0', 9600)
+def write():
+    pass
+
+try:
+    ser = serial.Serial('/dev/ttyACM0', 9600)
+except OSError:
+        ser = {"write": write}
+
 
 app = Flask(__name__)
 

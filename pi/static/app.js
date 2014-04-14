@@ -51,6 +51,7 @@ function stop() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.stream').setAttribute('src', window.location.href.slice(0, -1) + ':8080/?action=stream');
     ['up', 'down', 'left', 'right'].forEach(function(dir) {
         window[dir] = handleDirection.bind(this, dir);
         var elem = window[dir + 'Elem'] = document.querySelector('.' + dir);
