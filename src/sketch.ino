@@ -32,6 +32,7 @@ void setup(){
   pinMode(BIN2, OUTPUT);
 
   Serial.begin(9600);
+  stop();
 }
 
 int prevSerialVal;
@@ -39,6 +40,7 @@ void loop()
 {
     if (Serial.available() > 0) {
         int serialVal = Serial.read();
+
         if (serialVal != prevSerialVal) {
             prevSerialVal = serialVal;
 
@@ -56,14 +58,14 @@ void loop()
 
             if (serialVal == UP) {
                 stop();
-                move(1, SPEED, 0);
-                move(2, SPEED, 0);
+                move(1, SPEED, 1);
+                move(2, SPEED, 1);
             }
 
             if (serialVal == DOWN) {
                 stop();
-                move(1, SPEED, 1);
-                move(2, SPEED, 1);
+                move(1, SPEED, 0);
+                move(2, SPEED, 0);
             }
 
             if (serialVal == STOP) {

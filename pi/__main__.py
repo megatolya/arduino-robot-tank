@@ -47,4 +47,4 @@ def stop():
     ser.write("5")
     return ""
 
-app.run(port=80, host='192.168.0.2')
+app.run(port=80, host='192.168.1.10')
